@@ -1,16 +1,16 @@
-.ChartHolder {
+.Dashboard {
     font-family: 'Roboto Condensed';
 }
 
-.ChartHolder .visualization-layer text {
+.Dashboard .visualization-layer text {
     font-size: 0.8em;
 }
 
-.ChartHolder .tick-line path {
+.Dashboard .tick-line path {
     stroke: #aaa;
 }
 
-.ChartHolder .vx-legend {
+.Dashboard .vx-legend {
     font-size: 0.9em;
     margin-top: 1em;
 }

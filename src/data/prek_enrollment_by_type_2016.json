@@ -1,33 +1,33 @@
 [{
     "name": "CT",
-    "type": "Private",
+    "group": "Private",
     "value": 0.298
 }, {
     "name": "CT",
-    "type": "Public",
+    "group": "Public",
     "value": 0.353
 }, {
     "name": "Region",
-    "type": "Private",
+    "group": "Private",
     "value": 0.257
 }, {
     "name": "Region",
-    "type": "Public",
+    "group": "Public",
     "value": 0.401
 }, {
     "name": "Hartford",
-    "type": "Private",
+    "group": "Private",
     "value": 0.098
 }, {
     "name": "Hartford",
-    "type": "Public",
+    "group": "Public",
     "value": 0.535
 }, {
     "name": "North End",
-    "type": "Private",
+    "group": "Private",
     "value": 0.148
 }, {
     "name": "North End",
-    "type": "Public",
+    "group": "Public",
     "value": 0.594
 }]
