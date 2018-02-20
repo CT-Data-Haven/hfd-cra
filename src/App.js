@@ -17,7 +17,7 @@ const links = [
 
 const App = () => (
 	<div className="App">
-		<Router>
+		<Router basename="/hfd-cra">
 			<div>
 				<NavBar links={links} />
 
