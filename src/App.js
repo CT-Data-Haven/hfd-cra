@@ -10,8 +10,9 @@ import './App.css';
 import childhood from './components/sectors/childhood/childhood.js';
 
 const links = [
-	{ to: '/childhood', title: 'Early childhood' },
-	{ to: '/economy', title: 'Economic development' }
+	{ to: '/', title: 'Home', exact: true },
+	{ to: '/childhood', title: 'Early childhood', exact: false },
+	{ to: '/economy', title: 'Economic development', exact: false }
 ];
 
 const App = () => (
