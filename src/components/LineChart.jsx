@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResponsiveXYFrame } from 'semiotic';
 import { LegendOrdinal } from '@vx/legend';
-import { max, format } from 'd3';
+import { format } from 'd3';
 
 import ChartStage from './ChartStage';
 
