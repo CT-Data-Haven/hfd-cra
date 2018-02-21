@@ -1,12 +1,12 @@
 import React from 'react';
 import { Message } from 'semantic-ui-react';
 
-const Vision = ({ vision }) => (
-	<div className="Vision">
+const Goal = ({ goal }) => (
+	<div className="Goal">
 		<Message color="blue" size="large">
-			<p>{ vision }</p>
+			<p><strong>Goal:</strong> { goal }</p>
 		</Message>
 	</div>
 );
 
-export default Vision;
+export default Goal;

@@ -1,5 +1,8 @@
 .Dashboard {
-    font-family: 'Roboto Condensed';
+    /* font-family: 'Roboto Condensed'; */
+	margin-top: 1.2em;
+	background-color: #eee;
+	border-radius: 3px;
 }
 
 .Dashboard .visualization-layer text {

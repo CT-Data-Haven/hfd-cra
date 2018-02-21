@@ -7,10 +7,10 @@ import BarChart from '../../BarChart';
 const lipsum = require('lorem-ipsum');
 
 const pal = require('../../../palette.json');
-const bold4 = [pal.blue[7], pal.red[6], pal.cyan[7], pal.lime[7]];
-const indigo2 = [pal.indigo[8], pal.blue[3]];
-const bright2 = [pal.indigo[5], pal.cyan[6]];
-const bright3 = [pal.cyan[6], pal.pink[6], pal.blue[7]];
+const bold4 = [pal.blue[7], pal.red[6], pal.lime[7], pal.violet[7]];
+const indigo2 = [pal.indigo[8], pal.indigo[3]];
+const bright2 = [pal.blue[7], pal.red[5]];
+const bright3 = [pal.indigo[6], pal.pink[6], pal.cyan[7]];
 
 const trendData = d3.nest().key((d) => d.name).entries(require('./data/prek_enrollment_trend_2000_2016.json'));
 const typeData = require('./data/prek_enrollment_by_type_2016.json');

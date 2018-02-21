@@ -1,39 +1,35 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Divider } from 'semantic-ui-react';
 
-import Sector from './components/Sector';
-import MockSector from './components/MockSector';
+// import Sector from './components/Sector';
+// import MockSector from './components/MockSector';
 import NavBar from './components/NavBar';
+import Area from './components/Area';
+import Home from './components/Home';
 
 import './App.css';
 
-import childhood from './components/sectors/childhood/childhood.js';
+// import childhood from './components/sectors/childhood/childhood.js';
+import routes from './data/routes.js';
+import charts from './data/charts.js';
 
-const links = [
-	{ to: '/', title: 'Home', exact: true },
-	{ to: '/childhood', title: 'Early childhood', exact: false },
-	{ to: '/economy', title: 'Economic development', exact: false }
-];
-
+// pass filtered meta down to Topic
 const App = () => (
 	<div className="App">
 		<Router basename="/hfd-cra">
 			<div>
-				<NavBar links={links} />
 
-				<Route exact path="/" component={Home} />
-				<Route path="/childhood" component={Childhood} />
-				<Route path="/economy" component={Economy} />
+				<NavBar links={routes} />
+
+				<Divider hidden section />
+
+				<Route path="/" component={Home} exact />
+				<Route path="/:area" render={(props) => <Area routes={routes} charts={charts} {...props} />} />
+
 			</div>
 		</Router>
 	</div>
 );
-
-
-
-const Home = () => ( <MockSector title="Home - placeholder" /> );
-const Childhood = () => ( <Sector {...childhood} /> );
-const Economy = () => ( <MockSector title="Economic development - example placeholder" /> );
-
 
 export default App;

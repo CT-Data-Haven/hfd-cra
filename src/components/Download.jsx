@@ -1,9 +1,9 @@
 import React from 'react';
 import { Header } from 'semantic-ui-react';
 
-const Download = ({ url }) => (
-	<Header as="h3" color="blue">
-		<a href={url}>Download data</a>
+const Download = ( props ) => (
+	<Header as="h4" color="blue">
+		<a href={props.url}>{`Download ${props.name} data`}</a>
 	</Header>
 );
 

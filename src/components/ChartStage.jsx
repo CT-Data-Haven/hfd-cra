@@ -5,7 +5,7 @@ import '../styles/ChartStage.css';
 
 const ChartStage = (props) => (
 		<Grid.Column width={props.width}>
-			<Header as="h3" attached="top">{ props.title }</Header>
+			<Header as="h4" attached="top">{ props.title }</Header>
 			<Segment attached="bottom">
 
 				{ props.children }
