@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 import '../styles/ChartStage.css';
 
@@ -14,5 +15,9 @@ const ChartStage = (props) => (
 			</Segment>
 		</Grid.Column>
 );
+
+ChartStage.defaultProps = {
+	width: 8
+};
 
 export default ChartStage;

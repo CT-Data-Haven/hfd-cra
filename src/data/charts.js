@@ -8,9 +8,8 @@ const charts = {
 			goal: lipsum({ count: 15, units: 'words' }),
 			charts: [
 				{
-					indicator: 'premature death rate',
+					indicator: 'ypll',
 					title: 'Years of potential life lost before age 75',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -22,12 +21,10 @@ const charts = {
 				{
 					indicator: 'wellbeing scores',
 					title: 'Wellbeing scores',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'child wellbeing scores',
 					title: 'Child and adolescent wellbeing',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -39,12 +36,10 @@ const charts = {
 				{
 					indicator: 'claims',
 					title: 'Claims',
-					width: 8,
 					source: 'xx'
 				}, {
 					indicator: 'hospital encounters',
 					title: 'Hospital encounters',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -64,12 +59,10 @@ const charts = {
 				{
 					indicator: 'missed health care',
 					title: 'Percent who didn\'t get needed health care in the past year',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'dental',
 					title: 'Dental visits',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -81,7 +74,6 @@ const charts = {
 				{
 					indicator: 'low birthweight',
 					title: 'Low birthweight',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -93,12 +85,10 @@ const charts = {
 				{
 					indicator: 'injury ypll',
 					title: 'Years of life lost from injuries',
-					width: 8,
 					source: 'xx'
 				}, {
 					indicator: 'injury hospital visits',
 					title: 'Hospital encounters for injuries and purposeful injury',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -110,12 +100,10 @@ const charts = {
 				{
 					indicator: 'overdoses',
 					title: 'Hospital encounters and deaths related to overdoses',
-					width: 8,
 					source: 'CHIME'
 				}, {
 					indicator: 'emergency response',
 					title: 'Emergency response',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -127,12 +115,10 @@ const charts = {
 				{
 					indicator: 'obesity',
 					title: 'Obesity rate',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'food security',
 					title: 'Food security',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}
 			]
@@ -144,12 +130,10 @@ const charts = {
 				{
 					indicator: 'smoking',
 					title: 'Smoking rate',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'lung cancer',
 					title: 'Lung cancer incidence',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -161,12 +145,10 @@ const charts = {
 				{
 					indicator: 'asthma hospital visits',
 					title: 'Hospital encounter rates for asthma',
-					width: 8,
 					source: 'CHIME'
 				}, {
 					indicator: 'asthma prevalence',
 					title: 'Asthma prevalence and severity',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}
 			]
@@ -178,12 +160,10 @@ const charts = {
 				{
 					indicator: 'chronic disease hospital visits',
 					title: 'Hospital encounter rates for chronic disease and "avoidable" hospitalization',
-					width: 8,
 					source: 'CHIME'
 				}, {
 					indicator: 'chronic disease prevalence',
 					title: 'Chronic disease prevalence',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}
 			]
@@ -198,18 +178,20 @@ const charts = {
 				{
 					indicator: '3rd grade reading',
 					title: '3rd grade reading scores',
-					width: 8,
 					source: 'xx'
 				}, {
 					indicator: 'graduation rate',
 					title: 'Graduation rate and college persistence',
-					width: 8,
 					source: 'xx'
 				}, {
-					indicator: 'early childhood education',
-					title: 'Access to quality early childhood education',
-					width: 8,
-					source: 'xx'
+					indicator: 'preschool',
+					title: 'Preschool enrollment by school type, 2016',
+					component: 'bar',
+					scheme: 'indigo2',
+					rExtent: [ 0, 0.75 ],
+					hasLegend: true,
+					ticks: 5,
+					source: 'American Community Survey'
 				}
 			]
 		}, {
@@ -220,12 +202,10 @@ const charts = {
 				{
 					indicator: 'civic wellbeing',
 					title: 'Civic wellbeing',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'local collaboratives',
 					title: 'Local collaboratives and initiatives',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -237,7 +217,6 @@ const charts = {
 				{
 					indicator: 'food environment',
 					title: 'Food environment',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -249,12 +228,10 @@ const charts = {
 				{
 					indicator: 'walking at night',
 					title: 'Perceived safety of taking walks at night',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'violence',
 					title: 'Injury due to violence',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -266,12 +243,11 @@ const charts = {
 				{
 					indicator: 'homeownership',
 					title: 'Homeownership',
-					width: 8,
-					source: 'American Community Survey'
+					source: 'American Community Survey',
+					component: 'bar'
 				}, {
 					indicator: 'foreclosure',
 					title: 'Foreclosures, vacancies, and evictions',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -283,12 +259,10 @@ const charts = {
 				{
 					indicator: 'housing code',
 					title: 'Housing code violations',
-					width: 8,
 					source: 'xx'
 				}, {
 					indicator: 'housing problems',
 					title: 'Reported housing problems',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}
 			]
@@ -299,18 +273,28 @@ const charts = {
 			charts: [
 				{
 					indicator: 'median family income',
-					title: 'Median family income',
-					width: 8,
-					source: 'American Community Survey'
+					title: 'Median family income, 2016',
+					source: 'American Community Survey',
+					component: 'bar',
+					scheme: 'bold4',
+					type: 'clusterbar',
+					format: '$.2s',
+					hasLegend: true
 				}, {
 					indicator: 'underemployment',
 					title: 'Underemployment and job access',
-					width: 8,
 					source: 'Community Wellbeing Survey'
+				}, {
+					indicator: 'child poverty',
+					title: 'Child poverty rates by age, 2016',
+					source: 'American Community Survey',
+					component: 'bar',
+					type: 'clusterbar',
+					hasLegend: true,
+					width: 16
 				}, {
 					indicator: 'job placement',
 					title: 'Job placement and retention',
-					width: 8,
 					source: 'xx'
 				}
 			]
@@ -322,12 +306,10 @@ const charts = {
 				{
 					indicator: 'complete streets',
 					title: 'Complete streets',
-					width: 8,
 					source: 'xx'
 				}, {
 					indicator: 'parks',
 					title: 'Parks condition and access',
-					width: 8,
 					source: 'Community Wellbeing Survey'
 				}
 			]

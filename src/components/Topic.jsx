@@ -2,10 +2,10 @@ import React from 'react';
 import * as _ from 'underscore';
 import { Header, Icon } from 'semantic-ui-react';
 
-import MockDashboard from './MockDashboard';
+import Dashboard from './Dashboard';
 import Goal from './Goal';
 
-const Topic = ({ match, meta }) => {
+const Topic = ({ match, meta, data }) => {
 	let topic = match.params.topic;
 	let info = _.find(meta, (d) => d.id === topic);
 	let icon = info.icon ? <Icon name={info.icon} color="blue" /> : <span />;
@@ -19,7 +19,7 @@ const Topic = ({ match, meta }) => {
 
 			<Goal goal={info.goal} />
 
-			<MockDashboard charts={info.charts} />
+			<Dashboard charts={info.charts} data={data[topic]} />
 		</div>
 	);
 };
