@@ -5,8 +5,13 @@ import { ResponsiveOrdinalFrame } from 'semiotic';
 import { LegendOrdinal } from '@vx/legend';
 import { max, format } from 'd3';
 import { defaultProps } from 'recompose';
+import wrap from 'word-wrap';
 
 import ChartStage from './ChartStage';
+
+const tspans = (str, thresh) => (str.length <= thresh || str.indexOf(' ') === -1 ?
+	str :
+	str.split(' ').map((d, i) => <tspan key={i} x={0} dy={`${i}em`}>{d}</tspan>));
 
 const withDefaults = defaultProps({
 	size: [ 400, 240 ],
@@ -16,7 +21,9 @@ const withDefaults = defaultProps({
 	oPadding: 10,
 	format: '.0%',
 	margin: { top: 10, right: 16, bottom: 30, left: 40 },
-	ticks: 4
+	ticks: 4,
+	projection: 'vertical',
+	thresh: 15
 });
 
 const BarChart = (props) => {
@@ -34,7 +41,7 @@ const BarChart = (props) => {
 				style={ (d) => ({
 					fill: props.color(d.group)
 				}) }
-				oLabel={true}
+				oLabel={(d) => <text style={{ textAnchor: props.projection === 'vertical' ? 'middle' : 'end' }}>{tspans(d, props.thresh)}</text>}
 				oPadding={props.oPadding}
 				margin={props.margin}
 				axis={{
@@ -43,6 +50,7 @@ const BarChart = (props) => {
 					ticks: props.ticks
 				}}
 				rExtent={ props.rExtent || [ 0, max(props.data, d => d.value) ]}
+				projection={props.projection}
 			/>
 			{ props.hasLegend ?
 				<LegendOrdinal

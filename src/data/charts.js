@@ -21,7 +21,23 @@ const charts = {
 				{
 					indicator: 'wellbeing scores',
 					title: 'Wellbeing scores',
-					source: 'Community Wellbeing Survey'
+					subtitle: 'Scores calculated from variety of survey measures',
+					source: 'Community Wellbeing Survey',
+					component: 'bar',
+					type: { type: 'swarm', r: 8 },
+					format: 'd',
+					hasLegend: true,
+					projection: 'horizontal',
+					margin: { top: 10, right: 16, bottom: 40, left: 100 },
+					thresh: 20,
+					width: 16,
+					rExtent: [ 40, 95 ]
+				}, {
+					indicator: 'self rated health',
+					title: 'Adults in excellent or very good self-rated health, 2015',
+					subtitle: 'Including Hartford adults by income',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
 				}, {
 					indicator: 'child wellbeing scores',
 					title: 'Child and adolescent wellbeing',
@@ -58,12 +74,21 @@ const charts = {
 			charts: [
 				{
 					indicator: 'missed health care',
-					title: 'Percent who didn\'t get needed health care in the past year',
-					source: 'Community Wellbeing Survey'
+					title: 'Adults who didn\'t get needed health care in the past year, 2015',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
 				}, {
-					indicator: 'dental',
-					title: 'Dental visits',
-					source: 'xx'
+					indicator: 'annual dental',
+					title: 'Adults with dental visit in past year, 2015',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
+				}, {
+					indicator: 'dental hospital visits',
+					title: 'Hospital encounters for preventable dental conditions, 2012-2014',
+					subtitle: 'Age-adjusted annualized rate per 10,000 residents',
+					source: 'CHIME',
+					component: 'bar',
+					format: 'd'
 				}
 			]
 		}, {
@@ -88,8 +113,11 @@ const charts = {
 					source: 'xx'
 				}, {
 					indicator: 'injury hospital visits',
-					title: 'Hospital encounters for injuries and purposeful injury',
-					source: 'xx'
+					title: 'Hospital encounters for homicide and purposeful injury, 2012-2014',
+					subtitle: 'Age-adjusted annualized rate per 10,000 residents',
+					source: 'CHIME',
+					component: 'bar',
+					format: 'd'
 				}
 			]
 		}, {
@@ -99,8 +127,11 @@ const charts = {
 			charts: [
 				{
 					indicator: 'overdoses',
-					title: 'Hospital encounters and deaths related to overdoses',
-					source: 'CHIME'
+					title: 'Hospital encounters for substance abuse, 2012-2014',
+					subtitle: 'Age-adjusted annualized rate per 10,000 residents',
+					source: 'CHIME',
+					component: 'bar',
+					format: 'd'
 				}, {
 					indicator: 'emergency response',
 					title: 'Emergency response',
@@ -115,11 +146,14 @@ const charts = {
 				{
 					indicator: 'obesity',
 					title: 'Obesity rate',
-					source: 'Community Wellbeing Survey'
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
 				}, {
-					indicator: 'food security',
-					title: 'Food security',
-					source: 'Community Wellbeing Survey'
+					indicator: 'food insecurity',
+					title: 'Adults reporting food insecurity, 2015',
+					subtitle: 'Including Hartford adults by race',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
 				}
 			]
 		}, {
@@ -130,7 +164,9 @@ const charts = {
 				{
 					indicator: 'smoking',
 					title: 'Smoking rate',
-					source: 'Community Wellbeing Survey'
+					subtitle: 'Including Hartford adults by sex',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
 				}, {
 					indicator: 'lung cancer',
 					title: 'Lung cancer incidence',
@@ -144,12 +180,23 @@ const charts = {
 			charts: [
 				{
 					indicator: 'asthma hospital visits',
-					title: 'Hospital encounter rates for asthma',
-					source: 'CHIME'
+					title: 'Hospital encounter rate for asthma, children under 5, 2012-2014',
+					subtitle: 'Annualized rate per 10,000 children',
+					source: 'CHIME',
+					component: 'bar',
+					format: 'd'
 				}, {
 					indicator: 'asthma prevalence',
-					title: 'Asthma prevalence and severity',
-					source: 'Community Wellbeing Survey'
+					title: 'Asthma prevalence among adults, 2015',
+					subtitle: 'Including Hartford adults by race',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
+				}, {
+					indicator: 'asthma severity',
+					title: 'Moderate to severe asthma among adults, 2015',
+					subtitle: 'Share of adults with asthma who use inhaler 3+ times per week',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
 				}
 			]
 		}, {
@@ -158,13 +205,26 @@ const charts = {
 			goal: lipsum({ count: 15, units: 'words' }),
 			charts: [
 				{
-					indicator: 'chronic disease hospital visits',
-					title: 'Hospital encounter rates for chronic disease and "avoidable" hospitalization',
-					source: 'CHIME'
+					indicator: 'diabetes hospital visits',
+					title: 'Hospital encounter rates for diabetes, 2012-2014',
+					subtitle: 'Age-adjusted annualized rates per 10,000 residents',
+					source: 'CHIME',
+					component: 'bar',
+					format: 'd'
+				}, {
+					indicator: 'heart disease hospital visits',
+					title: 'Hospital encounter rates for heart disease, 2012-2014',
+					subtitle: 'Age-adjusted annualized rates per 10,000 residents',
+					source: 'CHIME',
+					component: 'bar',
+					format: 'd'
 				}, {
 					indicator: 'chronic disease prevalence',
-					title: 'Chronic disease prevalence',
-					source: 'Community Wellbeing Survey'
+					title: 'Adult chronic disease prevalence, 2015',
+					source: 'Community Wellbeing Survey',
+					component: 'bar',
+					type: 'clusterbar',
+					hasLegend: true
 				}
 			]
 		}
@@ -177,21 +237,24 @@ const charts = {
 			charts: [
 				{
 					indicator: '3rd grade reading',
-					title: '3rd grade reading scores',
-					source: 'xx'
-				}, {
-					indicator: 'graduation rate',
-					title: 'Graduation rate and college persistence',
-					source: 'xx'
+					title: 'SBAC reading pass rate, 3rd grade, 2016-17',
+					subtitle: 'Share of students meeting or exceeding goal',
+					source: 'CT State Dept of Education',
+					component: 'bar'
 				}, {
 					indicator: 'preschool',
 					title: 'Preschool enrollment by school type, 2016',
+					subtitle: 'Percent of children ages 3 and 4',
 					component: 'bar',
 					scheme: 'indigo2',
 					rExtent: [ 0, 0.75 ],
 					hasLegend: true,
 					ticks: 5,
 					source: 'American Community Survey'
+				}, {
+					indicator: 'graduation rate',
+					title: 'Graduation rate and college persistence',
+					source: 'xx'
 				}
 			]
 		}, {
@@ -201,7 +264,7 @@ const charts = {
 			charts: [
 				{
 					indicator: 'civic wellbeing',
-					title: 'Civic wellbeing',
+					title: 'Civic wellbeing, 2015',
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'local collaboratives',
@@ -227,8 +290,10 @@ const charts = {
 			charts: [
 				{
 					indicator: 'walking at night',
-					title: 'Perceived safety of taking walks at night',
-					source: 'Community Wellbeing Survey'
+					title: 'Feel safe walking at night, 2015',
+					subtitle: 'Including Hartford adults by sex',
+					source: 'Community Wellbeing Survey',
+					component: 'bar'
 				}, {
 					indicator: 'violence',
 					title: 'Injury due to violence',
@@ -242,7 +307,8 @@ const charts = {
 			charts: [
 				{
 					indicator: 'homeownership',
-					title: 'Homeownership',
+					title: 'Homeownership, 2016',
+					subtitle: 'Percent of all households',
 					source: 'American Community Survey',
 					component: 'bar'
 				}, {
@@ -282,7 +348,7 @@ const charts = {
 					hasLegend: true
 				}, {
 					indicator: 'underemployment',
-					title: 'Underemployment and job access',
+					title: 'Underemployment and job access, 2015',
 					source: 'Community Wellbeing Survey'
 				}, {
 					indicator: 'child poverty',
@@ -308,9 +374,11 @@ const charts = {
 					title: 'Complete streets',
 					source: 'xx'
 				}, {
-					indicator: 'parks',
-					title: 'Parks condition and access',
-					source: 'Community Wellbeing Survey'
+					indicator: 'parks and sidewalks',
+					title: 'Report local parks, sidewalks in good condition, 2015',
+					source: 'Community Wellbeing Survey',
+					component: 'bar',
+					type: 'clusterbar'
 				}
 			]
 		}
