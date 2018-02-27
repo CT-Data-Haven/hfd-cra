@@ -39,7 +39,7 @@ const charts = {
 					source: 'Community Wellbeing Survey',
 					component: 'bar',
 					scheme: 'twotone',
-					width: 10
+					width: 16
 				}, {
 					indicator: 'child wellbeing scores',
 					title: 'Child and adolescent wellbeing',

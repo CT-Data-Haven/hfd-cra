@@ -10,7 +10,7 @@ const NavBar = (props) => (
 			name="Home"
 			exact
 			activeStyle={{
-				background: '#2185D0'
+				background: '#5f78f6'
 			}}
 		/>
 		{ props.links.map((d, i) => (
@@ -21,7 +21,7 @@ const NavBar = (props) => (
 				name={d.title}
 				exact={d.exact}
 				activeStyle={{
-					background: '#2185D0'
+					background: '#5f78f6'
 				}}
 			/>
 		))}

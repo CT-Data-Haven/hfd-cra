@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900|Roboto+Condensed');
-
 
 .App {
-	font-family: 'Roboto', sans-serif !important;
+	/* font-family: 'Roboto', sans-serif !important; */
     padding: 24px 0 60px 0;
 }
 
