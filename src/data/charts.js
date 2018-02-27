@@ -37,7 +37,9 @@ const charts = {
 					title: 'Adults in excellent or very good self-rated health, 2015',
 					subtitle: 'Including Hartford adults by income',
 					source: 'Community Wellbeing Survey',
-					component: 'bar'
+					component: 'bar',
+					scheme: 'twotone',
+					width: 10
 				}, {
 					indicator: 'child wellbeing scores',
 					title: 'Child and adolescent wellbeing',
@@ -153,7 +155,8 @@ const charts = {
 					title: 'Adults reporting food insecurity, 2015',
 					subtitle: 'Including Hartford adults by race',
 					source: 'Community Wellbeing Survey',
-					component: 'bar'
+					component: 'bar',
+					scheme: 'twotone'
 				}
 			]
 		}, {
@@ -166,7 +169,8 @@ const charts = {
 					title: 'Smoking rate',
 					subtitle: 'Including Hartford adults by sex',
 					source: 'Community Wellbeing Survey',
-					component: 'bar'
+					component: 'bar',
+					scheme: 'twotone'
 				}, {
 					indicator: 'lung cancer',
 					title: 'Lung cancer incidence',
@@ -190,7 +194,8 @@ const charts = {
 					title: 'Asthma prevalence among adults, 2015',
 					subtitle: 'Including Hartford adults by race',
 					source: 'Community Wellbeing Survey',
-					component: 'bar'
+					component: 'bar',
+					scheme: 'twotone'
 				}, {
 					indicator: 'asthma severity',
 					title: 'Moderate to severe asthma among adults, 2015',
@@ -293,7 +298,8 @@ const charts = {
 					title: 'Feel safe walking at night, 2015',
 					subtitle: 'Including Hartford adults by sex',
 					source: 'Community Wellbeing Survey',
-					component: 'bar'
+					component: 'bar',
+					scheme: 'twotone'
 				}, {
 					indicator: 'violence',
 					title: 'Injury due to violence',
@@ -378,7 +384,9 @@ const charts = {
 					title: 'Report local parks, sidewalks in good condition, 2015',
 					source: 'Community Wellbeing Survey',
 					component: 'bar',
-					type: 'clusterbar'
+					type: 'clusterbar',
+					hasLegend: true,
+					thresh: 30
 				}
 			]
 		}

@@ -8,7 +8,7 @@ import { componentFromProp } from 'recompose';
 import MockChart from './MockChart';
 import BarChart from './BarChart';
 import LineChart from './LineChart';
-import withChartFunctions from './withChartFunctions.js';
+// import withChartFunctions from './withChartFunctions.js';
 
 import '../styles/Dashboard.css';
 
@@ -17,7 +17,8 @@ const schemes = {
 	bold4: [ pal.blue[7], pal.red[6], pal.lime[7], pal.violet[7] ],
 	indigo2: [ pal.indigo[8], pal.indigo[3] ],
 	bright2: [ pal.blue[7], pal.red[5] ],
-	bright3: [ pal.indigo[6], pal.pink[6], pal.cyan[7] ]
+	bright3: [ pal.indigo[6], pal.pink[6], pal.cyan[7] ],
+	twotone: [ pal.gray[8], pal.violet[4] ]
 };
 
 const ChartComponent = componentFromProp('component');

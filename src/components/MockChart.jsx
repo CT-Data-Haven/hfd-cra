@@ -4,7 +4,7 @@ import ChartStage from './ChartStage';
 
 const MockChart = (props) => (
 	<ChartStage {...props}>
-		<p>chart</p>
+		<p>Data pending</p>
 	</ChartStage>
 );
 
